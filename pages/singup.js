@@ -1,5 +1,7 @@
 import PageLayout from "../components/PageLayout";
 import style from "./../styles/SingUp.module.css";
+import { AiOutlineMail, AiOutlineUnlock } from "react-icons/ai";
+import { BsPerson } from "react-icons/bs";
 
 export default function SingUp() {
   return (
@@ -14,10 +16,11 @@ export default function SingUp() {
             <span className={style.let}>let</span> user = {"{"}
           </p>
           <p>
-            user: <span className={style.data_user}>"AMG"</span>
+            userName: <span className={style.data_user}>"Alexis"</span>
           </p>
           <p>
-            email: <span className={style.data_user}>"amg@gmail.com"</span>
+            email:{" "}
+            <span className={style.data_user}>"alexisgiozza@gmail.com"</span>
           </p>
           <p>
             password: <span className={style.data_user}>"********"</span>
@@ -26,30 +29,43 @@ export default function SingUp() {
         </div>
         <form className={style.form}>
           <div className={style.container_input}>
-            <span className={style.span}></span>
+            <span className={style.span}>
+              <BsPerson />
+            </span>
             <input
               className={style.input}
               type="text"
               placeholder="Username"
+              defaultValue="Alexis"
+              required
             ></input>
           </div>
           <div className={style.container_input}>
-            <span className={style.span}></span>
+            <span className={style.span}>
+              <AiOutlineMail />
+            </span>
             <input
               className={style.input}
               type="email"
+              required
               placeholder="Mail"
+              defaultValue="alexisgiozza@gmail.com"
             ></input>
           </div>
           <div className={style.container_input}>
-            <span className={style.span}></span>
+            <span className={style.span}>
+              <AiOutlineUnlock />
+            </span>
             <input
               className={style.input}
               type="password"
               placeholder="Password"
+              required
             ></input>
           </div>
-          <button className={style.button}>SING UP</button>
+          <button className={style.button} type="submit">
+            SING UP
+          </button>
         </form>
       </div>
     </PageLayout>
