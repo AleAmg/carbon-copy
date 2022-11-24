@@ -1,0 +1,91 @@
+.page {
+  width: 170px;
+  margin-left: 3%;
+  display: flex;
+  border: 1px solid #fff;
+  border-radius: 0 30px 0 0;
+}
+
+.page_element {
+  margin: 8px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.container_form {
+  width: 94%;
+  border: solid #fff 1px;
+  border-radius: 0 30px 30px;
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
+
+.data {
+  width: 86%;
+  border: solid #fff 1px;
+  border-radius: 0 30px 30px;
+  margin: 15px auto;
+  padding: 15px;
+  background-color: #0047ff;
+}
+
+.data_user {
+  color: #ef88bd;
+}
+
+.let {
+  color: #01ff1a;
+}
+
+.form {
+  width: 95%;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.container_input {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: center;
+  height: 50px;
+  margin-top: 15px;
+}
+
+.input {
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+  padding-left: 50px;
+  border-radius: 40px;
+  border: solid #fff 1px;
+  background-color: #0047ff;
+  color: #fff;
+}
+
+.input::placeholder {
+  color: rgb(236, 236, 236);
+}
+
+.button {
+  width: 140px;
+  height: 46px;
+  position: absolute;
+  right: 3px;
+  bottom: -76px;
+  border-radius: 30px;
+  border: solid #fff 1px;
+  background-color: #0047ff;
+  color: #fff;
+}
+
+.span {
+  position: absolute;
+  border-radius: 50%;
+  height: 37px;
+  width: 37px;
+  border: solid white 1px;
+  left: 7%;
+}

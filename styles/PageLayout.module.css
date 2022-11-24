@@ -1,0 +1,24 @@
+.container {
+  margin: 0 auto;
+  margin-top: 84px;
+  padding-bottom: 100px;
+  margin-bottom: 100px;
+  width: 94%;
+  border-radius: 30px;
+  background: linear-gradient(
+    153.54deg,
+    #0047ff 0%,
+    rgba(218, 218, 218, 0.7) 124.22%
+  );
+}
+
+.image {
+  margin-left: 3%;
+  height: 90px;
+  width: 200px;
+}
+
+.text {
+  margin-left: 3%;
+  font-weight: 400;
+}
