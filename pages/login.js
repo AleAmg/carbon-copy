@@ -1,45 +1,23 @@
 import PageLayout from "../components/PageLayout";
 import style from "./../styles/SingUp.module.css";
 import { AiOutlineMail, AiOutlineUnlock } from "react-icons/ai";
-import { BsPerson } from "react-icons/bs";
 import useInput from "../hook/useInput";
+import Link from "next/link";
 
-import axios from "axios";
-import { useRouter } from "next/router";
-
-const register = async (name, email, password) => {
-  await axios.post("http://localhost:3001/api/user/singin", {
-    name,
-    mail: email,
-    password,
-  });
-};
-
-export default function SingUp() {
-  const name = useInput("name");
+export default function LogIn() {
   const email = useInput("mail");
   const password = useInput("password");
-  const router = useRouter()
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    register(name.value, email.value, password.value);
-    router.push("/")
-  };
 
   return (
     <PageLayout title="Carbon copy - Sing Up">
       <div className={style.page}>
         <h4 className={style.page_element}>o o o</h4>
-        <h3 className={style.page_element}>Sing up</h3>
+        <h3 className={style.page_element}>Log In</h3>
       </div>
       <div className={style.container_form}>
         <div className={style.data}>
           <p>
             <span className={style.let}>let</span> user = {"{"}
-          </p>
-          <p>
-            userName: <span className={style.data_user}>"{name.value}"</span>
           </p>
           <p>
             email: <span className={style.data_user}>"{email.value}"</span>
@@ -49,21 +27,7 @@ export default function SingUp() {
             {"}"}
           </p>
         </div>
-        <form className={style.form} onSubmit={handleSubmit}>
-          <div className={style.container_input}>
-            <span className={style.span}>
-              <BsPerson />
-            </span>
-            <input
-              className={style.input}
-              type="text"
-              placeholder="Username"
-              required
-              name={name.name}
-              value={name.value}
-              onChange={name.handleChange}
-            ></input>
-          </div>
+        <form className={style.form} /* onSubmit={handleSubmit} */>
           <div className={style.container_input}>
             <span className={style.span}>
               <AiOutlineMail />
@@ -92,10 +56,16 @@ export default function SingUp() {
               onChange={password.handleChange}
             ></input>
           </div>
-          <button className={style.button} type="submit">
-            SING UP
+          <button className={style.button_login} type="submit">
+            LOG IN
           </button>
         </form>
+        <h5 className={style.isRegister}>
+          Don't Have an Account??{" "}
+          <Link href="/singup" className={style.link}>
+            Sign up
+          </Link>
+        </h5>
       </div>
     </PageLayout>
   );

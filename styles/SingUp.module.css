@@ -83,6 +83,18 @@
   color: #fff;
 }
 
+.button_login {
+  width: 140px;
+  height: 46px;
+  position: absolute;
+  right: 3px;
+  bottom: -140px;
+  border-radius: 30px;
+  border: solid #fff 1px;
+  background: none;
+  color: #fff;
+}
+
 .span {
   position: absolute;
   border-radius: 50%;
@@ -94,4 +106,17 @@
   align-items: center;
   justify-content: center;
   font-size: 22px;
+}
+
+.isRegister{
+  margin-left: 7%;
+}
+
+.link{
+  margin-left: 6px;
+  color:  #ef88bd;
+}
+
+.link:hover{
+  text-decoration: underline;
 }

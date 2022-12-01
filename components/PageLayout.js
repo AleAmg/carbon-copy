@@ -23,7 +23,7 @@ export default function PageLayout({ children, title = "Otaku Store" }) {
             <Link className={style.link} href="/">
               <BsHeart />
             </Link>
-            <Link className={style.link} href="/singup">
+            <Link className={style.link} href="/login">
               <BsPerson />
             </Link>
             <Link className={style.link} href="/">
