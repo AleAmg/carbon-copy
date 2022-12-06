@@ -1,0 +1,15 @@
+.container {
+  background-color: #ffb800;
+  border-radius: 0 25px 25px;
+  padding: 5%;
+}
+.fakeTextarea {
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 0 25px 25px;
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+  min-height: 26px;
+  outline: none;
+}

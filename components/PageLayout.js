@@ -17,7 +17,7 @@ export default function PageLayout({ children, title = "Otaku Store" }) {
       <main>
         <div className={style.container}>
           <nav className={style.navbar}>
-            <Link className={style.link} href="/">
+            <Link className={style.link} href="/download">
               <TfiDownload />
             </Link>
             <Link className={style.link} href="/">

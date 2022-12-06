@@ -6,8 +6,7 @@ export default function Home() {
   return (
     <PageLayout title="Carbon copy - Home">
       <div className={styles.container}>
-        <Link href={"/singup"}>Sing up</Link>
-        <h1>Home</h1>
+        Home
       </div>
     </PageLayout>
   );

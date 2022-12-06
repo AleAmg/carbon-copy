@@ -9,7 +9,7 @@ export default function LogIn() {
   const password = useInput("password");
 
   return (
-    <PageLayout title="Carbon copy - Sing Up">
+    <PageLayout title="Carbon copy - Log In">
       <div className={style.page}>
         <h4 className={style.page_element}>o o o</h4>
         <h3 className={style.page_element}>Log In</h3>
