@@ -2,11 +2,17 @@ import PageLayout from "../components/PageLayout";
 import styles from "../styles/Download.module.css";
 import html2canvas from "html2canvas";
 import { useEffect } from "react";
+import useInput from "../hook/useInput";
 
 import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
 
 export default function Download() {
+  const text = useInput(
+    "text",
+    `let arr = [1,2,3,4,5]`
+  );
+
   const exportPNG = () => {
     const input = document.getElementById("App-png");
     html2canvas(input, {
@@ -23,18 +29,28 @@ export default function Download() {
   useEffect(() => {
     Prism.highlightAll();
   }, []);
+  useEffect(() => {
+    Prism.highlightAll();
+  }, [text.value]);
 
   return (
     <PageLayout title="Carbon copy - Download">
       <div className={styles.container} id="App-png">
-        <pre>
-          <code className="language-javascript">
-           let arr = [1,2,3]
-          </code>
+        <pre className={styles.fakeTextarea} id="code">
+          <code className={`language-javascript`} id="codi">{text.value}</code>
         </pre>
+        <textarea
+          className={styles.textarea}
+          name={text.name}
+          value={text.value}
+          onChange={text.handleChange}
+          spellCheck="false"
+        ></textarea>
       </div>
 
-      <button onClick={() => exportPNG()}>xxx</button>
+      <button className={styles.button} onClick={() => exportPNG()}>
+        xxx
+      </button>
     </PageLayout>
   );
 }
