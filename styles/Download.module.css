@@ -43,6 +43,19 @@
   white-space: pre-line;
 }
 
+.container_button{
+  position: relative;
+}
+
 .button {
-  margin-top: 30px;
+  color: #fff;
+  z-index: 110;
+  width: 140px;
+  height: 46px;
+  border-radius: 30px;
+  border: solid #fff 1px;
+  background: none;
+  position: absolute;
+  right: 6%;
+  top: 15px;
 }

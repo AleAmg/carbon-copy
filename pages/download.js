@@ -8,10 +8,7 @@ import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
 
 export default function Download() {
-  const text = useInput(
-    "text",
-    `let arr = [1,2,3,4,5]`
-  );
+  const text = useInput("text", `let arr = [1,2,3,4,5]`);
 
   const exportPNG = () => {
     const input = document.getElementById("App-png");
@@ -21,7 +18,7 @@ export default function Download() {
       useCORS: true,
     }).then((canva) => {
       let enlace = document.createElement("a");
-      enlace.download = "download.png";
+      enlace.download = "carbo-copy.png";
       enlace.href = canva.toDataURL("image/png");
       enlace.click();
     });
@@ -37,7 +34,9 @@ export default function Download() {
     <PageLayout title="Carbon copy - Download">
       <div className={styles.container} id="App-png">
         <pre className={styles.fakeTextarea} id="code">
-          <code className={`language-javascript`} id="codi">{text.value}</code>
+          <code className={`language-javascript`} id="codi">
+            {text.value}
+          </code>
         </pre>
         <textarea
           className={styles.textarea}
@@ -47,10 +46,11 @@ export default function Download() {
           spellCheck="false"
         ></textarea>
       </div>
-
-      <button className={styles.button} onClick={() => exportPNG()}>
-        xxx
-      </button>
+      <div className={styles.container_button}>
+        <button className={styles.button} onClick={() => exportPNG()}>
+          DOWNLOAD
+        </button>
+      </div>
     </PageLayout>
   );
 }
