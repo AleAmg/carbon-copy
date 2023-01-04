@@ -108,15 +108,32 @@
   font-size: 22px;
 }
 
-.isRegister{
+.isRegister {
   margin-left: 7%;
 }
 
-.link{
+.link {
   margin-left: 6px;
-  color:  #ef88bd;
+  color: #ef88bd;
 }
 
-.link:hover{
+.link:hover {
   text-decoration: underline;
+}
+
+.button_logout_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button_logout {
+  width: 140px;
+  height: 46px;
+  border-radius: 30px;
+  border: solid #fff 1px;
+  background: none;
+  color: #fff;
+  margin-top: 15px;
+ 
 }

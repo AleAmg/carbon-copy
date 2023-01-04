@@ -2,6 +2,8 @@ import styles from "../styles/Home.module.css";
 import Head from "next/head";
 import Image from "next/image";
 import carbon from "./../public/image/carboncopy.svg";
+import carboncito from "./../public/image/logoCarbon.png";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -34,12 +36,20 @@ export default function Home() {
         />
       </div>
       <div className={styles.footer}>
-        <div className={styles.text}></div>
-        <div className={styles.row_container}>
-          <span className={styles.row}></span>
-          <span className={styles.row}></span>
-          <span className={styles.row}></span>
+        <div className={styles.text}>
+          Proyecto educativo inspirado en
+          <Image
+            src={carboncito}
+            width="98"
+            height="36"
+            alt="Logo of carbon copy 2"
+          />
         </div>
+        <Link className={styles.row_container} href="/download">
+          <span className={styles.row}></span>
+          <span className={styles.row}></span>
+          <span className={styles.row}></span>
+        </Link>
       </div>
     </>
   );

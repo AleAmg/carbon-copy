@@ -3,6 +3,7 @@ import carbon from "./../public/image/carboncopy.svg";
 import Image from "next/image";
 import style from "./../styles/PageLayout.module.css";
 import Link from "next/link";
+import {AiOutlineHome} from "react-icons/ai"
 import { BsSun, BsPerson, BsHeart } from "react-icons/bs";
 import { TfiDownload } from "react-icons/tfi";
 
@@ -27,7 +28,7 @@ export default function PageLayout({ children, title = "Otaku Store" }) {
               <BsPerson />
             </Link>
             <Link className={style.link} href="/">
-              <BsSun />
+              <AiOutlineHome />
             </Link>
           </nav>
           <Image

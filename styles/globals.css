@@ -20,6 +20,8 @@ a {
 
 #codi {
   white-space: pre-line;
+  
+  
 }
 
 @media (prefers-color-scheme: dark) {

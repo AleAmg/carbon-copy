@@ -1,7 +1,7 @@
 import PageLayout from "../components/PageLayout";
 import styles from "../styles/Download.module.css";
 import html2canvas from "html2canvas";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import useInput from "../hook/useInput";
 
 import Prism from "prismjs";
@@ -9,7 +9,8 @@ import "prismjs/themes/prism-tomorrow.css";
 
 export default function Download() {
   const text = useInput("text", `let arr = [1,2,3,4,5]`);
-
+  const [language, setLenguage] = useState("javascript");
+  const [color, setColor] = useState("#ffb800");
   const exportPNG = () => {
     const input = document.getElementById("App-png");
     html2canvas(input, {
@@ -26,15 +27,40 @@ export default function Download() {
   useEffect(() => {
     Prism.highlightAll();
   }, []);
+
   useEffect(() => {
     Prism.highlightAll();
   }, [text.value]);
 
+  const style = {
+    background: color,
+  };
+
   return (
     <PageLayout title="Carbon copy - Download">
-      <div className={styles.container} id="App-png">
+      <div className={styles.container_select}>
+        <select
+          className={styles.select}
+          onChange={(e) => setLenguage(e.target.value)}
+        >
+          <option selected>javascript</option>
+          <option>css</option>
+          <option>html</option>
+        </select>
+        <i></i>
+      </div>
+      <div className={styles.container_inputColor}>
+        <input
+          className={styles.inputColor}
+          type="color"
+          onChange={(e) => setColor(e.target.value)}
+          value={color}
+        ></input>
+        <p>{color}</p>
+      </div>
+      <div className={styles.container} id="App-png" style={style}>
         <pre className={styles.fakeTextarea} id="code">
-          <code className={`language-javascript`} id="codi">
+          <code className={`language-${language}`} id="codi">
             {text.value}
           </code>
         </pre>
@@ -77,3 +103,7 @@ export default function Download() {
               {`
           }`}
             </div> */
+
+/* let str = "  some /hola/ sla  sheholas ho la  /hola/";
+let replaced = str.replaceAll("  ", " ");
+console.log(replaced); */
