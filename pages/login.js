@@ -18,7 +18,6 @@ const GetStaticProps = async (email, password) => {
     localStorage.setItem("tokenLogin", JSON.stringify(res.data.token));
     localStorage.setItem("name", JSON.stringify(res.data.name));
   }
-  console.log(res.data);
 };
 
 const removeLocalStorage = () => {
