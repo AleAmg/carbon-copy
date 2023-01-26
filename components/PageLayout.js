@@ -7,7 +7,7 @@ import {AiOutlineHome} from "react-icons/ai"
 import { BsSun, BsPerson, BsHeart } from "react-icons/bs";
 import { TfiDownload } from "react-icons/tfi";
 
-export default function PageLayout({ children, title = "Otaku Store" }) {
+export default function PageLayout({ children, title = "Carbon copy" }) {
   return (
     <>
       <Head>

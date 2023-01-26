@@ -38,25 +38,27 @@ export default function Download() {
 
   return (
     <PageLayout title="Carbon copy - Download">
-      <div className={styles.container_select}>
-        <select
-          className={styles.select}
-          onChange={(e) => setLenguage(e.target.value)}
-        >
-          <option selected>javascript</option>
-          <option>css</option>
-          <option>html</option>
-        </select>
-        <i></i>
-      </div>
-      <div className={styles.container_inputColor}>
-        <input
-          className={styles.inputColor}
-          type="color"
-          onChange={(e) => setColor(e.target.value)}
-          value={color}
-        ></input>
-        <p>{color}</p>
+      <div className={styles.container_inputs}>
+        <div className={styles.container_select}>
+          <select
+            className={styles.select}
+            onChange={(e) => setLenguage(e.target.value)}
+          >
+            <option selected>javascript</option>
+            <option>css</option>
+            <option>html</option>
+          </select>
+          <i></i>
+        </div>
+        <div className={styles.container_inputColor}>
+          <input
+            className={styles.inputColor}
+            type="color"
+            onChange={(e) => setColor(e.target.value)}
+            value={color}
+          ></input>
+          <p>{color}</p>
+        </div>
       </div>
       <div className={styles.container} id="App-png" style={style}>
         <pre className={styles.fakeTextarea} id="code">

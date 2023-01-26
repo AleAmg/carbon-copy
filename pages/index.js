@@ -2,14 +2,13 @@ import styles from "../styles/Home.module.css";
 import Head from "next/head";
 import Image from "next/image";
 import carbon from "./../public/image/carboncopy.svg";
-import carboncito from "./../public/image/logoCarbon.png";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Otaku Store - Home</title>
+        <title>Carbon copy - Home</title>
         <meta name="Page to screen a component html" content="Proyect" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -38,12 +37,9 @@ export default function Home() {
       <div className={styles.footer}>
         <div className={styles.text}>
           Proyecto educativo inspirado en
-          <Image
-            src={carboncito}
-            width="98"
-            height="36"
-            alt="Logo of carbon copy 2"
-          />
+          <Link href="https://carbon.now.sh/">
+            <h1 className={styles.carboncito}>carbon</h1>
+          </Link>
         </div>
         <Link className={styles.row_container} href="/download">
           <span className={styles.row}></span>
@@ -51,6 +47,7 @@ export default function Home() {
           <span className={styles.row}></span>
         </Link>
       </div>
+      <div className={styles.p5}>P5</div>
     </>
   );
 }

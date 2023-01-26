@@ -56,6 +56,7 @@ export default function LogIn() {
         <h3 className={style.page_element}>Log In</h3>
       </div>
       <div className={style.container_form}>
+      <div className={style.container_max}>
         {token ? (
           <div className={style.button_logout_container}>
             <button className={style.button_logout} onClick={logOut}>
@@ -117,6 +118,7 @@ export default function LogIn() {
             </h5>
           </>
         )}
+        </div>
       </div>
     </PageLayout>
   );
